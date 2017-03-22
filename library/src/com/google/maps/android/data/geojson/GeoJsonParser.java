@@ -1,6 +1,8 @@
 package com.google.maps.android.data.geojson;
 
 
+import android.util.Log;
+
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.maps.android.data.Geometry;
@@ -8,8 +10,6 @@ import com.google.maps.android.data.Geometry;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +20,7 @@ import java.util.Iterator;
  * array of
  * GeoJsonFeature objects parsed from the GeoJSON file.
  */
-/* package */ class GeoJsonParser {
+public class GeoJsonParser {
 
     private static final String LOG_TAG = "GeoJsonParser";
 
@@ -76,7 +76,7 @@ import java.util.Iterator;
      *
      * @param geoJsonFile GeoJSON file to parse
      */
-    /* package */ GeoJsonParser(JSONObject geoJsonFile) {
+    public GeoJsonParser(JSONObject geoJsonFile) {
         mGeoJsonFile = geoJsonFile;
         mGeoJsonFeatures = new ArrayList<>();
         mBoundingBox = null;
@@ -452,7 +452,7 @@ import java.util.Iterator;
      *
      * @return array of GeoJsonFeatures
      */
-    /* package */ ArrayList<GeoJsonFeature> getFeatures() {
+    public ArrayList<GeoJsonFeature> getFeatures() {
         return mGeoJsonFeatures;
     }
 
@@ -464,7 +464,7 @@ import java.util.Iterator;
      * @return LatLngBounds object containing bounding box of FeatureCollection, null if no bounding
      * box
      */
-    /* package */ LatLngBounds getBoundingBox() {
+    public LatLngBounds getBoundingBox() {
         return mBoundingBox;
     }
 

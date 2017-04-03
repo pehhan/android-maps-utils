@@ -1,9 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
 apply plugin: 'signing'
+apply plugin: 'com.github.dcendents.android-maven'
 
 archivesBaseName = 'android-maps-utils'
-group = 'com.google.maps.android'
+group = 'com.github.pehhan'
 
 dependencies {
     compile 'com.google.android.gms:play-services-maps:9.6.1'

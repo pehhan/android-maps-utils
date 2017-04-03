@@ -361,10 +361,16 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
 
         @SuppressLint("NewApi")
         public void run() {
+
+            // XXX: The if statement below (which is an optimization) means that we won't
+            // necessarily get a callback to shouldRenderAsCluster() when zoom level is changed.
+
+            /*
             if (clusters.equals(DefaultClusterRenderer.this.mClusters)) {
                 mCallback.run();
                 return;
             }
+            */
 
             final MarkerModifier markerModifier = new MarkerModifier();
 
